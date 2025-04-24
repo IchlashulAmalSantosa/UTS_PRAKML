@@ -40,30 +40,25 @@ Karena NIM saya berakhiran **genap**, maka algoritma yang digunakan adalah **Nai
 
 ##  Hasil Evaluasi
 
-Model Naive Bayes diuji menggunakan data uji sebanyak 10 data (20% dari total data), dan memberikan hasil evaluasi sebagai berikut:
+Model Naive Bayes diuji menggunakan 200 data uji dan menghasilkan evaluasi sebagai berikut:
+
+**Akurasi: 0.775 (atau 77,5%)
 
               precision    recall  f1-score   support
 
-           0       0.75      0.75      0.75         4
-           1       0.83      0.83      0.83         6
+           0       0.72      0.61      0.66        71
+           1       0.80      0.87      0.83       129
 
-    accuracy                           0.80        10
-    macro avg      0.79      0.79      0.79        10
-    weighted avg   0.80      0.80      0.80        10
+    accuracy                           0.78       200
+    macro avg      0.76      0.74      0.74       200
+    weighted avg   0.77      0.78      0.77       200
 
 Penjelasan:
 
--Akurasi: 80% — artinya 8 dari 10 prediksi model benar.
+-Model mencapai akurasi 77,5%, menunjukkan kinerja cukup baik.
 
--Precision 0 (tidak membeli): 75% — dari semua yang diprediksi tidak membeli, 75% benar.
+-Kelas 1 (membeli komputer) memiliki kinerja lebih tinggi dibanding kelas 0.
 
--Recall 0: 75% — dari semua yang benar-benar tidak membeli, 75% berhasil dikenali.
+-Precision dan recall lebih tinggi pada kelas mayoritas (1), yang umum dalam distribusi data tidak seimbang.
 
--Precision 1 (membeli): 83%
-
--Recall 1: 83%
-
--F1-score: Seimbang antara precision dan recall untuk kedua kelas.
-
-Model cukup seimbang dan mampu membedakan antara kelas pembeli dan bukan pembeli dengan performa yang memuaskan, terutama untuk dataset kecil seperti ini.
-
+-Model dapat digunakan sebagai prediksi awal, meskipun bisa ditingkatkan lebih lanjut dengan teknik balancing atau model tambahan.
